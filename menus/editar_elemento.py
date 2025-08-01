@@ -1,15 +1,13 @@
 import utils.screenController as sc
 import utils.validateData as vd
-import random
 import utils.corefiles as cf
-
 
 def editar_elemento():
     while True:
         print("\n--- Submenú: Editar Elemento ---")
         print("1. Editar Libro")
         print("2. Editar Película")
-        print("3. Editar Videojuego")
+        print("3. Editar Música")
         print("4. Volver al Menú Principal")
         print("----------------------------------------")
 

@@ -59,32 +59,5 @@ def initializeJson(initialStructure:Dict)->None:
             if key not in currentData:
                 currentData[key] = value
         writeJson(currentData)
-
-def guardar_coleccion(accion: str) -> None:
-    if accion == "guardar":
-        data = readJson()
-        if not data:
-            print("No hay datos para guardar.")
-            return
-        writeJson(data)
-        print("Colección guardada exitosamente.")
-    elif accion == "cargar":
-        data = readJson()
-        if not data:
-            print("No hay datos para cargar.")
-            return
-        print("Colección cargada exitosamente.")
-    else:
-        print("Acción no reconocida. Use 'guardar' o 'cargar'.")
-def cargar_coleccion() -> bool:
-    try:
-        with open(AGREGAR, "r", encoding="utf-8") as cf:
-            data = json.load(cf)
-            if not data:
-                print("No hay datos para cargar.")
-                return False
-            print("Colección cargada exitosamente.")
-            return True
-    except (FileNotFoundError, json.JSONDecodeError):
-        print("Error al cargar la colección.")
-        return False
+        return True
+    return False

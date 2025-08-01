@@ -5,7 +5,6 @@ import menus.editar_elemento as ed
 import menus.eliminar_elemento as el
 import menus.ver_elemento as ve
 import menus.ver_por_categoria as vp
-import menus.guardar_collecion as gc
 from config import AGREGAR
 if __name__ == "__main__":
         sc.limpiarPantalla()
@@ -19,8 +18,7 @@ def main_menu():
     print("4. Editar un Elemento")
     print("5. Eliminar un Elemento")
     print("6. Ver Elementos por Categoría")
-    print("7. Guardar y Cargar Colección")
-    print("8. Salir")
+    print("7. Salir")
     print("=============================================")
 
 def main():
@@ -48,9 +46,6 @@ def main():
                         print("\n>>> Ver elementos por categoría...")
                         vp.ver_por_categoria()
                   case 7:
-                        print("\n>>> Guardar y Cargar Colección...")
-                        gc.guardar_cargar_coleccion()
-                  case 8:
                         respuesta = input("¿Está seguro que desea salir? (s/n): ")
                         if respuesta.lower() == "s":
                             return
