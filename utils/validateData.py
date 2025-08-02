@@ -12,16 +12,8 @@ def validateInt(msg:str)->int:
 
 def validatatext(msg):
     x = input(msg)
-    if all(c.isalpha() or c.isspace() for c in x):
+    if all(c.isalnum() or c.isspace() for c in x) and x.strip():
         return x
-    elif x.isdigit():
-        print("ERROR: VALOR INVALIDO")
-        os.system("pause")
-        return validatatext(msg)
-    elif x.isalnum():
-        print("ERROR: VALOR INVALIDO")
-        os.system("pause")
-        return validatatext(msg)
     else:
         print("ERROR: VALOR INVALIDO")
         os.system("pause")

@@ -1,0 +1,18 @@
+{
+    "LIBRO": {
+        "sss 2": {
+            "Name": "sss 2",
+            "aut": "sss",
+            "genero": "sss",
+            "valora": 2.0
+        }
+    },
+    "PELICULA": {
+        "hhhh 2": {
+            "Name": "hhhh 2",
+            "aut": "ddd",
+            "genero": "eee",
+            "valora": 3.0
+        }
+    }
+}
