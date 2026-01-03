@@ -19,10 +19,11 @@ def validatatext(msg):
         os.system("pause")
         return validatatext(msg)
     
-def validateflot(msg:float)->float:
+def validateflot(msg:str)->float:
     try:
-        x=input(msg)
-        return x
+        x = input(msg)
+        return float(x)
     except ValueError:
-        print('ingrese un valor valido')
-        return(validateflot)
+        print('ERROR: VALOR INVALIDO. Ingrese un número válido.')
+        os.system("pause")
+        return validateflot(msg)

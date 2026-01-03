@@ -4,6 +4,7 @@ import utils.corefiles as cf
 
 def editar_elemento():
     while True:
+        sc.limpiarPantalla()
         print("\n--- Submenú: Editar Elemento ---")
         print("1. Editar Libro")
         print("2. Editar Película")
@@ -12,7 +13,13 @@ def editar_elemento():
         print("----------------------------------------")
 
         opcion_sub = input("Seleccione una opción (1-4): ")
-        opcion_sub = int(opcion_sub)
+        try:
+            opcion_sub = int(opcion_sub)
+        except ValueError:
+            print("Opción no válida, por favor ingrese un número.")
+            sc.pausar_pantalla()
+            sc.limpiarPantalla()
+            continue
 
         match opcion_sub:
             case 1:
@@ -22,10 +29,11 @@ def editar_elemento():
                 autLi = vd.validatatext("Autor: ")
                 generoLi = vd.validatatext("Genero: ")
                 valorLi = vd.validateflot("Ingrese la valoración que le da al libro (1-10): ")
-                valorLi = float(valorLi)
                 if valorLi <=0 or valorLi >10:
                     print("Por favor solo de (1-10)")
-                    return valorLi
+                    sc.pausar_pantalla()
+                    sc.limpiarPantalla()
+                    continue
                 libro = {
                     "Name": nomLi,
                     "aut": autLi,
@@ -43,6 +51,7 @@ def editar_elemento():
                     print("No se pudo editar el libro ❌ ")
                     
                 sc.pausar_pantalla()
+                sc.limpiarPantalla()
             case 2:
                 print("\n>>> Editando película...")
                 nombre_pelicula = vd.validatatext("Ingrese el nombre de la película a editar: ")
@@ -51,10 +60,11 @@ def editar_elemento():
                 autPe = vd.validatatext("Autor: ")
                 generoPe = vd.validatatext("Genero: ")
                 valorPe = vd.validateflot("Ingrese la valoración que le da a la película (1-10): ")
-                valorPe = float(valorPe)
                 if valorPe <=0 or valorPe >10:
                     print("Por favor solo de (1-10)")
-                    return valorPe
+                    sc.pausar_pantalla()
+                    sc.limpiarPantalla()
+                    continue
                 pelicula = {
                     "Name": nomPe,
                     "aut": autPe,
@@ -72,6 +82,7 @@ def editar_elemento():
                     print("No se pudo editar la película ❌ ")
                     
                 sc.pausar_pantalla()
+                sc.limpiarPantalla()
             case 3:
                 nombre_musica = vd.validatatext("Ingrese el nombre de la canción a editar: ")
 
@@ -79,10 +90,11 @@ def editar_elemento():
                 autMu = vd.validatatext("Artista: ")
                 generoMu = vd.validatatext("Genero: ")
                 valorMu = vd.validateflot("Ingrese la valoración que le da a la canción (1-10): ")
-                valorMu = float(valorMu)
                 if valorMu <=0 or valorMu >10:
                     print("Por favor solo de (1-10)")
-                    return valorMu
+                    sc.pausar_pantalla()
+                    sc.limpiarPantalla()
+                    continue
                 musica = {
                     "Name": nomMu,
                     "aut": autMu,
@@ -100,17 +112,21 @@ def editar_elemento():
                     print("No se pudo editar la canción ❌ ")
                     
                 sc.pausar_pantalla()
+                sc.limpiarPantalla()
             case 4:
                 print("seguro que desea volver al menú principal? (s/n)")
                 respuesta = input().strip().lower()
                 if respuesta == 's':
                     return
                 elif respuesta == 'n':
+                    sc.limpiarPantalla()
                     continue
                 else:
                     print('Opción no válida. Regresando al menú principal.')
+                    sc.pausar_pantalla()
                     return
             case _:
                 print("Opción no válida, por favor intente de nuevo.")
                 sc.pausar_pantalla()
+                sc.limpiarPantalla()
                 continue

@@ -9,6 +9,7 @@ def ver_por_categoria():
 
     categorias = list(elementos.keys())
     while True:
+        sc.limpiarPantalla()
         print("\nCategorías disponibles:")
         for idx, cat in enumerate(categorias, 1):
             print(f"{idx}. {cat}")

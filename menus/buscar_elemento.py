@@ -3,6 +3,7 @@ import utils.validateData as vd
 import utils.corefiles as cf
 
 def buscar_elemento():
+    sc.limpiarPantalla()
     elementos = cf.readJson()
     if not elementos:
         print("No hay elementos en la colección.")

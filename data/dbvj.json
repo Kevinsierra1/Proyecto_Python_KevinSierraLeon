@@ -5,6 +5,18 @@
             "aut": "sss",
             "genero": "sss",
             "valora": 2.0
+        },
+        "aaaa": {
+            "Name": "aaaa",
+            "aut": "ssss",
+            "genero": "aaaa",
+            "valora": 2.0
+        },
+        "1": {
+            "Name": "1",
+            "aut": "s",
+            "genero": "3",
+            "valora": 1.0
         }
     },
     "PELICULA": {
@@ -13,6 +25,14 @@
             "aut": "ddd",
             "genero": "eee",
             "valora": 3.0
+        }
+    },
+    "MUSICA": {
+        "aaaaa": {
+            "Name": "aaaaa",
+            "aut": "sss",
+            "genero": "sss",
+            "valora": 2.0
         }
     }
 }
